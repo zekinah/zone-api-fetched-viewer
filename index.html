@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Zone API Fetch Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.2.1/vue-resource.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but Zone RSS Feeder doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <p>{{ desc }}</p>
+        <div class="zn-input">
+            <input type="text" v-model="feed" @change="changeHandler">
+            <small>The sample API is from <a href="//pokeapi.co/" target="_blank">pokéAPI</a>.</small>
+        </div>
+        <div class="zn-card">
+            <pre><code>{{ items }}</code></pre>
+        </div>
+    </div>
+    <footer>
+        <div class="zn-footer">
+            © All rights reserved. Made with ❤️ by <strong> <a href="//github.com/zekinah" target="_blank">Zekinah Lecaros</a></strong>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

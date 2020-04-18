@@ -1,0 +1,76 @@
+
+body {
+    background: linear-gradient(1deg, #152d2c 0%, #37ce8a 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1,p {
+    text-align: center;
+}
+
+input[type="text"] {
+    font-family: 'Rubik', sans-serif;
+}
+
+input[type="text"] {
+    border: none;
+    padding: 10px;
+    display: block;
+    width: 50%;
+    border-radius: 20px;
+    margin: auto;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    background: #152d2c;
+    color: #37ce8a
+}
+
+div#app {
+    margin: 50px 15rem;
+    margin-bottom: 20px;
+}
+div#app .zn-card {
+    background: #ffffff;
+    color: #152d2c;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 20px;
+}
+
+div.zn-input {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+div#app .zn-card  pre {
+    white-space: pre-wrap;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+footer .zn-footer {
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    top: 10px;
+}
+
+@media screen and (max-width: 640px) {
+    input[type="text"] {
+        width: 70%;
+    }
+    div#app {
+        margin: 0;
+    }
+}
