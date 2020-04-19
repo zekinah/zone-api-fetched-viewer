@@ -4,7 +4,7 @@ new Vue({
         title: 'Zone API Fetched Viewer',
         desc: 'Enter an API URL below and hit enter',
         items: [],
-        feed: 'https://pokeapi.co/api/v2/pokemon',
+        feed: 'https://jsonplaceholder.typicode.com/users',
         show: true
     },
     created() {

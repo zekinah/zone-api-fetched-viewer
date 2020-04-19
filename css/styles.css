@@ -1,7 +1,7 @@
 
 body {
     background: linear-gradient(1deg, #152d2c 0%, #37ce8a 100%);
-    background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     color: #ffffff;
     font-family: 'Rubik', sans-serif;
