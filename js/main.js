@@ -4,21 +4,25 @@ new Vue({
         title: 'Zone API Fetched Viewer',
         desc: 'Enter an API URL below and hit enter',
         items: [],
-        feed: 'https://pokeapi.co/api/v2/pokemon'
+        feed: 'https://pokeapi.co/api/v2/pokemon',
+        show: true
     },
-    created: function() {
+    created() {
         this.fetchData();
     },
     methods: {
-        fetchData: function() {
+        fetchData() {
             this.$http.get(this.feed).then(response => {
                 this.items = response.body;
             });
         },
-        changeHandler: function(event) {
+        changeHandler(event) {
             this.feed = event.target.value;
             this.fetchData();
             
+        },
+        toTop() {
+            window.scrollTo(0,0);
         }
     }
 });

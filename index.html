@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.2.1/vue-resource.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/60/microsoft/209/right-pointing-magnifying-glass_1f50e.png"/>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -15,15 +16,16 @@
       <strong>We're sorry but Zone RSS Feeder doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app">
-        <h1>{{ title }}</h1>
+        <h1>{{ title }} 🔎</h1>
         <p>{{ desc }}</p>
         <div class="zn-input">
-            <input type="text" v-model="feed" @change="changeHandler">
+            <input type="text" v-model="feed" @change="changeHandler" placeholder="Type the API URL here" required>
             <small>The sample API is from <a href="//pokeapi.co/" target="_blank">pokéAPI</a>.</small>
         </div>
         <div class="zn-card">
             <pre>{{ items }}</pre>
         </div>
+        <div class="zn-scrolltotop" @click="toTop">☝️</div>
     </div>
     <footer>
         <div class="zn-footer">

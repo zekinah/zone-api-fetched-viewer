@@ -59,6 +59,20 @@ div#app .zn-card  pre {
     display: block;
 }
 
+div.zn-scrolltotop {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 22px;
+    line-height: 22px;
+    background: #37ce8a;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+  }
+
 footer .zn-footer {
     padding: 10px;
     text-align: center;
