@@ -17,7 +17,11 @@ new Vue({
         },
         changeHandler(e) {
             this.feed = e.target.value;
-            this.fetchData();
+            if (this.feed == '' || this.feed == null) {
+                this.items = [];
+            } else {
+                this.fetchData();
+            }
         },
         toTop() {
             window.scrollTo(0,0);
