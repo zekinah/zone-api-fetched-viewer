@@ -3,23 +3,21 @@ new Vue({
     data: {
         title: 'Zone API Fetched Viewer',
         desc: 'Enter an API URL below and hit enter',
-        items: [],
         feed: 'https://jsonplaceholder.typicode.com/users',
+        items: [],
         show: true
     },
     created() {
         this.fetchData();
     },
     methods: {
-        fetchData() {
-            this.$http.get(this.feed).then(response => {
-                this.items = response.body;
-            });
+        async fetchData() {
+            const { data } = await axios.get(this.feed);
+            this.items = data;
         },
-        changeHandler(event) {
-            this.feed = event.target.value;
+        changeHandler(e) {
+            this.feed = e.target.value;
             this.fetchData();
-            
         },
         toTop() {
             window.scrollTo(0,0);

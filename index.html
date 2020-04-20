@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Zone API Fetch Viewer</title>
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/60/microsoft/209/right-pointing-magnifying-glass_1f50e.png"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.2.1/vue-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/60/microsoft/209/right-pointing-magnifying-glass_1f50e.png"/>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -19,7 +20,7 @@
         <h1>{{ title }} 🔎</h1>
         <p>{{ desc }}</p>
         <div class="zn-input">
-            <input type="text" v-model="feed" @change="changeHandler" placeholder="Type the API URL here" required>
+            <input type="text" @change="changeHandler" placeholder="Type the API URL here" required>
             <small>The sample API is from <a href="//jsonplaceholder.typicode.com/" target="_blank">JSON Placeholder</a>.</small>
         </div>
         <div class="zn-card">
